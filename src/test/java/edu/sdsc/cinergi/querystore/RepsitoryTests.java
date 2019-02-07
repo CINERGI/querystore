@@ -81,6 +81,20 @@ import static org.junit.Assert.assertThat;
                 assertThat(format.parse(conference.getCreated()), greaterThan(format.parse(expectedDate)));
             }
         }
+        @Test
+        public void collectionSearch() throws ParseException {
+
+            String expectedCollection = "c1";
+            String expectedWord = "Test 1";
+            CriteriaQuery query = new CriteriaQuery(
+                    new Criteria("collections").is(expectedCollection));
+
+            List<PortalCollectionItem> result = operations.queryForList(query, PortalCollectionItem.class);
+
+            assertThat(result, hasSize(4));
+
+
+        }
 
         @Test
         public void geoSpatialSearch() {

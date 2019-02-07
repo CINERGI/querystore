@@ -1,5 +1,6 @@
 package edu.sdsc.cinergi.querystore.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -10,6 +11,8 @@ import java.util.List;
 
 import static org.springframework.data.elasticsearch.annotations.FieldType.Date;
 
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Data
 @Builder
 //@JsonDeserialize(builder = PortalCollectionItem.class)
