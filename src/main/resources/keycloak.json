@@ -1,0 +1,8 @@
+{
+  "realm": "Geoportal",
+  "auth-server-url": "http://localhost:8843/auth",
+  "ssl-required": "external",
+  "resource": "geoportal",
+  "public-client": true,
+  "use-resource-role-mappings": true
+}
